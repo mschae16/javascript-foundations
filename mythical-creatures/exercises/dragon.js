@@ -5,9 +5,12 @@ function Dragon(name, rider, color) {
   this.color = color;
   this.hungry = true;
   this.eat = function() {
+    eatCount++;
     if(eatCount === 3) {
-        return this.hungry = false;
+        this.hungry = false;
       }
+  }
 }
+
 
 module.exports = Dragon;
