@@ -3,26 +3,26 @@ var Hobbit = require('../exercises/hobbit');
 
 describe('Hobbit', function () {
 
-  it.skip('should be a function', function () {
+  it('should be a function', function () {
     assert.isFunction(Hobbit);
   });
 
-  it.skip('should instantiate our good friend, Hobbit', function () {
+  it('should instantiate our good friend, Hobbit', function () {
     var hobbit = new Hobbit();
     assert.isObject(hobbit);
   });
 
-  it.skip('should have a name', function () {
+  it('should have a name', function () {
     var hobbit = new Hobbit('Bilbo');
     assert.equal(hobbit.name, 'Bilbo');
   });
 
-  it.skip('should have an unadventurous disposition', function() {
+  it('should have an unadventurous disposition', function() {
     var hobbit = new Hobbit('Samwise');
     assert.equal(hobbit.disposition, 'homebody');
   });
 
-  it.skip('should have an age', function() {
+  it('should have an age', function() {
     var hobbit = new Hobbit('Meriadoc');
     assert.equal(hobbit.age, 0);
   });
