@@ -1,14 +1,14 @@
-function Hobbit(name, disposition, age) {
+function Hobbit(name) {
   this.name = name;
-  this.disposition = disposition;
-  this.age = age;
-  // this.hungry = true;
-  // this.eat = function() {
-  //   eatCount++;
-  //   if(eatCount === 3) {
-  //       this.hungry = false;
-  //     }
-  // }
+  this.disposition = 'homebody';
+  this.age = 0;
+  var ageCount = 0;
+  this.celebrateBirthday = function() {
+    ageCount++;
+    if(ageCount === 3) {
+        this.age = ageCount;
+      }
+  }
 }
 
 
