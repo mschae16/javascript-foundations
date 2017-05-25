@@ -32,7 +32,7 @@ describe('Pirate', function () {
     assert.equal(pirate.cursed, false);
   });
 
-  it.skip('should become cursed after 3 heinous acts', function() {
+  it('should become cursed after 3 heinous acts', function() {
     var pirate = new Pirate('JoshBeard', 'cook');
 
     assert.equal(pirate.cursed, false);
