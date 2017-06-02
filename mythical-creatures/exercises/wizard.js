@@ -12,11 +12,11 @@ Wizard.prototype.incantation = function(word) {
   return word.toUpperCase();
 }
 
-Wizard.prototype.cast = function() {
+Wizard.prototype.cast = function(spell) {
   this.counter++
   if(this.counter >= 3){
     this.isRested = false;
-    return 'I SHALL NOT CAST!'
+    return 'I SHALL NOT CAST!';
   }
   return 'MAGIC BULLET';
 }

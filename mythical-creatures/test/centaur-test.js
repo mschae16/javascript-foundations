@@ -37,7 +37,7 @@ describe('Centaur', function () {
     assert.equal(centaur.standing, true);
   });
 
-  it.skip('should be cranky after running or shooting a bow three times', function() {
+  it('should be cranky after running or shooting a bow three times', function() {
     var centaur = new Centaur('George');
 
     assert.equal(centaur.cranky, false);
@@ -49,7 +49,7 @@ describe('Centaur', function () {
     assert.equal(centaur.cranky, true)
   });
 
-  it.skip('should not shoot when cranky', function() {
+  it('should not shoot when cranky', function() {
     var centaur = new Centaur('George');
 
     for (var i = 0; i < 3; i++)  {
@@ -96,7 +96,7 @@ describe('Centaur', function () {
     assert.equal(centaur.sleep(), 'ZZZZ');
   });
 
-  it.skip('should not be cranky after sleeping', function() {
+  it('should not be cranky after sleeping', function() {
     var centaur = new Centaur('George');
 
     for (var i = 0; i < 3; i++)  {
