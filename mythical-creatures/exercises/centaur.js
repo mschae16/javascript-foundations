@@ -19,9 +19,9 @@ Centaur.prototype.sleep = function() {
 
 Centaur.prototype.run = function() {
   this.shot++;
-  if(this.shot >= 3) {
+  if(this.shot === 3) {
     this.cranky = true;
-  } else if(this.layingDown) {
+  } else if (this.layingDown)  {
     return 'NO!';
   } else {
     return 'Clop clop clop clop!!!';
@@ -30,10 +30,9 @@ Centaur.prototype.run = function() {
 
 Centaur.prototype.shoot = function() {
   this.shot++;
-  if(this.shot >= 3) {
+  if(this.shot === 3) {
     this.cranky = true;
-    return 'NO!';
-  } else if(this.layingDown) {
+  } else if ((this.cranky) || (this.layingDown)) {
     return 'NO!';
   } else {
     return 'Twang!!!';
@@ -52,11 +51,9 @@ Centaur.prototype.standUp = function() {
 
 Centaur.prototype.drinkPotion = function() {
   if(this.layingDown) {
-    this.cranky = true;
     return 'Not while I\'m standing!';
-  } else {
-    this.cranky = false;
   }
+  this.cranky = !this.cranky;
 }
 
 module.exports = Centaur;

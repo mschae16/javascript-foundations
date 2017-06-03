@@ -135,7 +135,7 @@ describe('Centaur', function () {
     assert.equal(centaur.drinkPotion(), 'Not while I\'m standing!');
   });
 
-  it.skip('should be cranky if it drinks potion while rested', function() {
+  it('should be cranky if it drinks potion while rested', function() {
     var centaur = new Centaur('George');
 
     assert.equal(centaur.cranky, false);
