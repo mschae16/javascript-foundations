@@ -3,7 +3,6 @@ function Centaur(name, breed) {
   this.name = name;
   this.breed = breed;
   this.cranky = false;
-  this.rested = false;
   this.standing = true;
   this.layingDown = false;
 }
@@ -52,12 +51,11 @@ Centaur.prototype.standUp = function() {
 }
 
 Centaur.prototype.drinkPotion = function() {
-  this.cranky = false;
-  // this.rested = true;
   if(this.layingDown) {
-    return 'Not while I\'m standing!';
-  } else if(this.rested) {
     this.cranky = true;
+    return 'Not while I\'m standing!';
+  } else {
+    this.cranky = false;
   }
 }
 
